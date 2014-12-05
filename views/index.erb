@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Scouting App</title>
+</head>
+<body>
+<article id="index-page">
+  <h2>Welcome!</h2>
+  <h3>Forms</h3>
+  <% if forms.empty? %>
+    <p>
+      No forms exist yet!  Why don't you
+      <a href="/form/new">create a form</a>?
+    </p>
+  <% else %>
+    <ul>
+      <% forms.each do |form| %>
+        <li><a href="/forms/new-entry/<%= form.id %>"><%= h form.title %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
+</article>
+</body>
+</html>
