@@ -1,23 +1,19 @@
-# User Authentication
+# Survey Application
 
-This example Sinatra application that implements basic user authentication, i.e., signing up, logging in, and logging out.
+This application enables users to create, respond to, and view results of forms.
+Please note that not all functionality is currently implemented
 
-## Running The Application
-
-Make sure you're in the `public-file-upload` directory.  Once there, run the following two commands to configure your application correctly:
-
-```text
-$ bundle install --without production
-$ rake setup:dotenv
-```
+##How to Run this Application
 
 ### On Cloud9
 
 If you're using [Cloud9](http://c9.io), run the application with
 
 ```
-$ ruby app.rb -p $PORT -o $IP
+$ ruby scouting-app.rb -p $PORT -o $IP
 ```
+
+Then, you can visit it at the url specified by Cloud9.
 
 ### On Your Own Computer
 
