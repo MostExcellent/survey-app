@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Scouting App</title>
+</head>
+<body>
+<article id="index-page">
+  <h2>Welcome!</h2>
+  <h3><%= form.title %></h3>
+  <table>
+    <tr><h4>
+      <% form.form_fields.each do |field| %>
+        <td><%= field.name %></td>
+      <% end %>
+    </h4></tr>
+    <% form.form_entries.each do |form_entry| %>
+      <tr>
+        <% form_entry.field_entries.each do |field_entry| %>
+          <td><%= field_entry.value %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</article>
+</body>
+</html>

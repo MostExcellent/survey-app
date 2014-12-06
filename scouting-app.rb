@@ -34,6 +34,10 @@ post("/forms/*/newreply") do |form_id|
   if form_entry.save
     redirect("/")
   else
-    "Oh no. :("
+    "Oh noes! An error has occurred. :("
   end
+end
+get("/forms/results/*") do |form_id|
+  form = Form.get(form_id)
+  erb(:showresults, :locals => { :form => form })
 end
