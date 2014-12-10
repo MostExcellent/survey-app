@@ -37,7 +37,27 @@ post("/forms/*/newreply") do |form_id|
     "Oh noes! An error has occurred. :("
   end
 end
+
 get("/forms/results/*") do |form_id|
   form = Form.get(form_id)
   erb(:showresults, :locals => { :form => form })
+end
+
+get("/forms/new/") do
+  erb(:makeform)
+end
+
+post("/forms/create/") do
+  form = Form.new(:title => params[:form_title])
+  
+  params[:fields].each do |id, field_title|
+    p field_title
+    form.form_fields.new(:form_id => form.id, :name => field_title)
+  end
+  
+  if form.save
+    redirect("/")
+  else
+    "Oh noes! An error has occurred. :("
+  end
 end

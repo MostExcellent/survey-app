@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Scouting App</title>
+<% #<script type="text/javascript">
+#   #var i = 0;
+#   function addField()
+#   {
+#     var para = document.createElement("textarea");
+#     var node = document.createTextNode("This is new.");
+#     para.appendChild(node);
+
+#     var element = document.getElementById();
+#     var child = document.getElementById();
+#     element.insertBefore(para,child);
+#   }
+# </script>
+%>
+</head>
+<body>
+<article id="index-page">
+  <h2>New Form</h2>
+    <br>
+    <form id="message-form" method="POST" action="/forms/create/">
+      <label for="title">Form Title</label>
+      <br>
+      <textarea id="title" name="form_title" placeholder="Form Title"></textarea>
+      <br><hr><br>
+      <textarea id="field-1" name="fields[1]" placeholder="Field Name"></textarea>
+      <br>
+      <textarea id="field-2" name="fields[2]" placeholder="Field Name"></textarea>
+      <br>
+      <textarea id="field-3" name="fields[3]" placeholder="Field Name"></textarea>
+      <br>
+      <textarea id="field-4" name="fields[4]" placeholder="Field Name"></textarea>
+      <br>
+      <button type="button" onclick="">Add Field</button>
+      <br>
+      <button type="submit">Submit Responses</button>
+      </form>
+    </ul>
+</article>
+</body>
+</html>
