@@ -1,11 +1,11 @@
 <html>
 <head>
-<title>Scouting App</title>
+  <title><%= h form.title %> Results</title>
 </head>
 <body>
 <article id="index-page">
   <h2>Welcome!</h2>
-  <h3><%= form.title %></h3>
+  <h3><%= h form.title %></h3>
   <table>
     <tr><h4>
       <% form.form_fields.each do |field| %>
