@@ -22,6 +22,10 @@ class FormField
   
   property :name,     String
   
+  property :type,     Integer
+  
+  has n, :options
+  
   has n, :field_entries
   belongs_to :form
 
@@ -51,6 +55,17 @@ class FieldEntry
   belongs_to :form_field
   belongs_to :form_entry
 
+end
+
+class Option
+  
+  include DataMapper::Resource
+  property :id,      Serial
+  
+  property :value,   String
+  
+  belongs_to :form_field
+  
 end
 
 DataMapper.finalize()

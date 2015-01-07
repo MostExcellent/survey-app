@@ -12,17 +12,16 @@
       newFieldTemplate = "<textarea id='field-4' name='fields[" + i.toString() + "]' placeholder='Field Name'></textarea><br><br>";
       newField = String.prototype.concat( document.getElementById("fields").innerHTML, newFieldTemplate);
       document.getElementById("fields").innerHTML = newField;
-      console.log(i);
     }
     function removeField()
     {
       if(i >= 0)
       {
-        i--;
         newFieldTemplate = "<textarea id='field-4' name='fields[" + i.toString() + "]' placeholder='Field Name'></textarea><br><br>";
+        i--;
         newField = document.getElementById("fields").innerHTML.substring(0,newFieldTemplate.length*i);
         document.getElementById("fields").innerHTML = newField;
-        console.log(i);
+    
       }
     }
 </script>
